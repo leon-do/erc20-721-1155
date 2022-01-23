@@ -1,3 +1,10 @@
+## Instructions
+- Deploy 1155   -> _my1155
+- Deploy 20     -> _my20
+- Deploy Main(_my1155, _my20) -> _myMain
+- Call 1155.addController(_myMain)
+- Call 20.addController(_myMain)
+
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >0.8.0;
