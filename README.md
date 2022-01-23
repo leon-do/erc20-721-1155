@@ -20,8 +20,9 @@ contract Main {
     My721 my721;
     My20 my20;
 
-    constructor(address _my1155, address _my20) {
+    constructor(address _my1155, address _my721, address _my20) {
         my1155 = My1155(_my1155);
+        my721 = My721(_my721);
         my20 = My20(_my20);
     }
 
@@ -31,6 +32,14 @@ contract Main {
 
     function burn1155(address _from, uint256 _id, uint256 _amount) external {
         my1155.burn(_from, _id, _amount);
+    }
+
+    function mint721(address _to, uint256 _id) external {
+        my721.mint(_to, _id);
+    }
+
+    function burn721(uint256 _id) external {
+        my721.burn(_id);
     }
 
     function mint20(address _to, uint256 _amount) external {
@@ -139,6 +148,5 @@ contract My20 is ERC20 {
         require(controllers[msg.sender], "Only controllers can remove");
         controllers[_controller] = false;
     }
-    
-}
-```
+
+}```
