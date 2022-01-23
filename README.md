@@ -35,7 +35,7 @@ contract My20 is ERC20 {
     }
 
     function mint(address _to, uint256 _amount) external {
-        require(controllers[msg.sender], "Only controllers can burn");
+        require(controllers[msg.sender], "Only controllers can mint");
         _mint(_to, _amount);
     }
 
