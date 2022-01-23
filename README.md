@@ -1,8 +1,10 @@
 ## Instructions
 - Deploy 1155   -> _my1155
+- Deploy 721    -> _my721
 - Deploy 20     -> _my20
-- Deploy Main(_my1155, _my20) -> _myMain
+- Deploy Main(_my1155, _my721 _my20) -> _myMain
 - Call 1155.addController(_myMain)
+- Call 721.addController(_myMain)
 - Call 20.addController(_myMain)
 
 ```solidity
